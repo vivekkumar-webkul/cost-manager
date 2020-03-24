@@ -31,6 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/prompt_email"
+            android:drawableLeft="@drawable/username"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -41,7 +42,8 @@
         android:layout_height="wrap_content"
         android:hint="@string/prompt_password"
         android:inputType="textPassword"
-        android:layout_margin="8dp"/>
+        android:layout_margin="8dp"
+        android:drawableLeft="@drawable/password"/>
 
     <Button
         android:id="@+id/login_button"

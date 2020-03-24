@@ -16,4 +16,5 @@
     <string name="enter_password">Enter Password</string>
     <string name="re_enter_password">Re-Enter Password</string>
     <string name="not_account_yet">Not account yet? Create one</string>
+    <string name="sign_out">Sign out</string>
 </resources>
