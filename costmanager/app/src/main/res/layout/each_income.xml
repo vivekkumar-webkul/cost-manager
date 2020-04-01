@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/name"
+        android:text="Income Name"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10px"
+        android:layout_marginTop="30px"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/name">
+
+    <TextView
+        android:id="@+id/income_val"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:text="income"
+        android:layout_marginTop="50px"
+        android:layout_marginLeft="30px"
+        android:textAlignment="center"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_toRightOf="@+id/income_val"
+        android:layout_width="100dp"
+        android:text="type"
+        android:layout_height="20dp"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="50px"
+        android:textAlignment="center"/>
+
+    <Button
+        android:layout_marginTop="30px"
+        android:layout_toRightOf="@+id/type"
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="edit"
+        android:textAlignment="center"/>
+
+    <Button
+        android:layout_marginTop="30px"
+        android:layout_toRightOf="@id/edit"
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textAlignment="center"
+        android:text="delete"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

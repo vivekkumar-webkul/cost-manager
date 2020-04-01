@@ -44,20 +44,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return res;
     }
 
-    public boolean checkUser(String username, String password) {
-        String[] columns = { COL_ID};
+    public Cursor checkUser(String username, String password) {
+        String[] columns = { COL_ID };
         SQLiteDatabase db = this.getReadableDatabase();
         String selection = COL_USERNAME + "=?" + " and " + COL_PASSWORD + "=?";
         String[] selectionArgs = { username, password };
 
         Cursor cursor = db.query(TABLE_NAME, columns, selection, selectionArgs, null, null, null);
-        int count = cursor.getCount();
-        cursor.close();
-        db.close();
+        return cursor;
+    }
 
-        if( count > 0)
-            return true;
-        else
-            return false;
+    public Cursor getUserData(int userId) {
+        String[] columns = { COL_ID, COL_NAME, COL_USERNAME, COL_PASSWORD };
+        SQLiteDatabase db = this.getReadableDatabase();
+        String selection = COL_ID + "=?";
+        String[] selectionArgs = { String.valueOf(userId) };
+
+        Cursor cursor = db.query(TABLE_NAME, columns, selection, selectionArgs, null, null, null);
+        return cursor;
+    }
+    public void  updatePasswordAndName(String newPassword,String name, int userId)
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        db.execSQL("UPDATE " + TABLE_NAME +" SET " + COL_PASSWORD +" ="+ "'" +newPassword + "'" + ","+ COL_NAME +" =" + "'" + name + "'" + " WHERE "+
+        COL_ID +" = " + userId);
+        db.close();
     }
 }

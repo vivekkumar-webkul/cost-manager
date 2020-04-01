@@ -9,7 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Management"></activity>
+        <activity
+            android:name=".Expense.ExpenseActivity"
+            android:label="@string/title_activity_expense"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Income.IncomeActivity"
+            android:label="@string/title_activity_income"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".Register" />
         <activity android:name=".Login" />
         <activity

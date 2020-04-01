@@ -11,10 +11,7 @@ import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
 
-    protected EditText username;
-    protected EditText email;
-    protected EditText password;
-    protected EditText repassword;
+    protected EditText username, email, password, repassword;
 
     protected Button registerButton;
     protected DatabaseHelper db;

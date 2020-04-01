@@ -17,7 +17,7 @@ public class SplashScreen extends AppCompatActivity {
 
     protected TextView title;
 
-    protected int splashTimeout = 5000;
+    protected int splashTimeout = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +31,12 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                SharedPreferences sh = getSharedPreferences("CostManagerSharedPrefereces", MODE_APPEND);
+                SharedPreferences sh = getSharedPreferences("CostManagerSharedPrefereces", MODE_PRIVATE);
                 String user = sh.getString("username", "");
+                int userId = sh.getInt("userId",0);
                 if(user.isEmpty()) {
                     Intent intent = new Intent(SplashScreen.this, Login.class);
+                    intent.putExtra("userId", userId);
                     startActivity(intent);
                     finish();
                 } else {

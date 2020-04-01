@@ -17,4 +17,10 @@
     <string name="re_enter_password">Re-Enter Password</string>
     <string name="not_account_yet">Not account yet? Create one</string>
     <string name="sign_out">Sign out</string>
+    <string name="title_activity_income">IncomeActivity</string>
+    <string name="title_activity_expense">ExpenseActivity</string>
+    <string name="re_enter_new_password">Re Enter New Password</string>
+    <string name="enter_new_password">Enter New Password</string>
+    <string name="enter_old_password">Enter Old Password</string>
+    <string name="account_management">Account Management</string>
 </resources>

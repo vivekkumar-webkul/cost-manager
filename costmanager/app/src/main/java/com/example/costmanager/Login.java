@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,16 +35,20 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 String user = username.getText().toString().trim();
                 String pwd = password.getText().toString().trim();
-
-                Boolean res = db.checkUser(user, pwd);
-                if(res) {
+                Cursor res = db.checkUser(user, pwd);
+                res.moveToFirst();
+                Boolean exists = res.getCount() > 0 ? true : false;
+                if(exists) {
+                    int userId = res.getInt(0);
                     SharedPreferences sh = getSharedPreferences("CostManagerSharedPrefereces", MODE_PRIVATE);
                     SharedPreferences.Editor editor = sh.edit();
+                    editor.putInt("userId", userId);
                     editor.putString("username", user);
                     editor.commit();
 
                     Toast.makeText(Login.this, "Successfully Logged in", Toast.LENGTH_SHORT).show();
                     Intent mainActivityIntent = new Intent(Login.this, MainActivity.class);
+//                    mainActivityIntent.putExtra("userId", userId);
                     startActivity(mainActivityIntent);
                 } else {
                     Toast.makeText(Login.this, "Login Failed! Try Again.", Toast.LENGTH_SHORT).show();

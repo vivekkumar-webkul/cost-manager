@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Management"
+    android:background="#FCFAEE">
+    <TextView
+        android:id="@+id/account_management_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/account_management"
+        android:fontFamily="@font/chunkfive_regular"
+        android:textSize="25dp"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:textColor="#73077E"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Edit Your Name"
+            android:id="@+id/update_username"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <EditText
+        android:id="@+id/old_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_margin="8dp"
+        android:hint="@string/enter_old_password"/>
+
+    <EditText
+        android:id="@+id/update_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_margin="8dp"
+        android:hint="@string/enter_new_password"/>
+
+    <EditText
+        android:id="@+id/update_repassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_margin="8dp"
+        android:hint="@string/re_enter_new_password"/>
+
+    <Button
+        android:id="@+id/update_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:layout_margin="10dp"
+        android:background="#2397EE"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:textColor="#FFFEFE"/>
+
+</LinearLayout>

@@ -9,7 +9,7 @@
     >
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/income"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Income"
@@ -20,7 +20,7 @@
         android:textColor="#FFFEFE"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/expense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Expenses"
@@ -31,7 +31,7 @@
         android:textColor="#FFFEFE"/>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/stats"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Statistic"
@@ -42,7 +42,7 @@
         android:textColor="#FFFEFE"/>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/acc_mgmt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Account Management"
